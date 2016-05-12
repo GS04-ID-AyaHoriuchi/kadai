@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>FormGet Responsive Form</title>
+  <!-----Including CSS for different screen sizes----->
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" media="screen and (max-width: 1200px) and (min-width: 601px)" href="responsiveform1.css" />
+  <link rel="stylesheet" media="screen and (max-width: 600px) and (min-width: 351px)" href="responsiveform2.css" />
+  <link rel="stylesheet" media="screen and (max-width: 350px)" href="responsiveform3.css" />
+</head>
+
+<body>
+  <div id="envelope">
+    <form action="log.php" method="post" enctype="multipart/form-data">
+    
+      <header>
+        <h2>登録フォーム</h2>
+        <p>おじいちゃんのためのデータベース</p>
+      </header>
+      <label>名前</label>
+      <input name="name" placeholder="堀内 亜弥" type="text" width="100px;">
+
+      <!--生年月日と年齢入力　nameの変更忘れずに！-->
+      <label>生年月日</label>
+      <input name="birth" placeholder="1900年1月1日" type="text">
+      <label>電話番号</label>
+      <input name="tell" placeholder="123456789" type="text">
+      <label>メールアドレス</label>
+      <input name="mail" placeholder="aaa@mail.com" type="text">
+      
+      <!--phpのフォーマット入れる-->
+       <action="" method="post" enctype="multipart/form-data">
+        <label for="upload">顔写真をアップロード</label>
+        <br/>
+        <input type="file" name="upfile" size="30" id="upload">
+        </action>
+        <input id="submit" type="submit" value="登録する">
+    </form>
+  </div>
+</body>
+
+</html>
